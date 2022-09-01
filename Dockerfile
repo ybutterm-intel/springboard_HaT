@@ -1,6 +1,6 @@
 FROM python:3.8-slim-buster
 
-RUN apt-get update && apt-get install -y wget curl nmap sudo socat
+RUN apt-get update && apt-get install -y wget curl nmap sudo socat kmod
 
 USER root
 ENV HOME /root
