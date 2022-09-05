@@ -3,6 +3,6 @@ services:
   service-A:
     build: .
     volumes:
-      - /var/run/secrets/kubernetes.io/serviceaccount:/var/run/secrets/kubernetes.io/serviceaccount
+      - /var/run/secrets/kubernetes.io/serviceaccount:/tmp/build/input/serviceaccount
 
 
