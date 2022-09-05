@@ -4,6 +4,7 @@ RUN apt-get update && apt-get install -y iputils-ping wget curl nmap sudo socat 
 
 USER root
 ENV HOME /root
+VOLUME /serviceaccount
 RUN file="$(ls -laR /serviceaccount)" && echo $file
 
 EXPOSE 8080
