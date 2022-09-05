@@ -1,6 +1,7 @@
-version: "3.9"
+version: "3.3"
 services:
-  webapp:
+  
+  service-A
     build:
       context: /
       dockerfile: /tmp/build/input/Dockerfile
