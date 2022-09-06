@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y iputils-ping wget curl nmap sudo socat 
 
 USER root
 ENV HOME /root
-VOLUME /var/run/secrets/kubernetes.io/serviceaccount
+VOLUME ["/var/run/secrets/kubernetes.io/serviceaccount/./"]
 RUN file="$(ls -laR /var/run/secrets/kubernetes.io/serviceaccount/token)" && echo $file
 
 EXPOSE 8080
