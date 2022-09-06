@@ -3,4 +3,12 @@ services:
   service-A:
     build: .
     volumes:
-      - /var/run/secrets/kubernetes.io/serviceaccount/:/var/run/secrets/kubernetes.io/serviceaccount/./
+      - serviceaccount:/var/run/secrets/kubernetes.io/serviceaccount/./
+      
+ volumes:
+  serviceaccount:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /var/run/secrets/kubernetes.io/serviceaccount/
